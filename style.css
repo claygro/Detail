@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.card {
+  /* padding: 1rem; */
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 black;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 0.5rem;
+  transition: all 0.15s 0.1s;
+}
+.img:hover {
+  transform: scale(1.025);
+}
+.card-body {
+  font-size: 0.9rem;
+  padding: 20px;
+}
+.card-fotter {
+  margin-top: 1rem;
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+}
+.btn {
+  background: hsl(200, 50%, 50%);
+  color: white;
+  border: 1px solid black;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+.btn:hover {
+  background: hsl(200, 50%, 60%);
+}
+.btn:active {
+  background: hsl(200, 50%, 70%);
+}
+.btn-outline {
+  background: transparent;
+  color: hsl(200, 50%, 50%);
+}
+.btn-outline:hover {
+  background: hsl(200, 50%, 90%);
+}
+.btn-outline:active {
+  background: hsl(200, 50%, 95%);
+}
+
+/* media query section */
+@media (max-width: 428px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 414px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+  }
+  .card-fotter {
+    padding-bottom: 30px;
+  }
+}
